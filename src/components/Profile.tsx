@@ -5,7 +5,10 @@ export function Profile() {
       <img src="https://github.com/douglasproglima.png" alt="Douglas Lima" />
       <div>
         <strong>Douglas Lima</strong>
-        <p>Level 1</p>
+        <p>
+          <img src="icons/level.svg" alt="Level" />
+          Level 1
+        </p>
       </div>
     </div>
   );
