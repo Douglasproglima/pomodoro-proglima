@@ -1,6 +1,6 @@
-<!-- <p align="center">
-  <img  alt="Pomodoro Proglima Logo" title="MoveIt" src=".github/readme/logo-full.svg" />
-</p> -->
+<p align="center">
+  <img  alt="Pomodoro Proglima Logo" title="Pomodoro Proglima" src=".github/readme/Pomodo Proglima-2.png" />
+</p> 
 
 <h1 align="center">
 🚧 Pomodoro Proglima | Em Construção 🚧
@@ -8,16 +8,16 @@
 
 <p align="center">
 
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Alquipo/moveit">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/douglasproglima/pomodoro-proglima">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Alquipo/moveit">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/douglasproglima/pomodoro-proglima">
 
-  <a href="https://www.linkedin.com/in/alquiponeto/">
-      <img alt="Made by Alquipo" src="https://img.shields.io/badge/made%20by-AlquipoNeto-blue">
+  <a href="https://www.linkedin.com/in/douglasproglima/">
+      <img alt="Made by Proglima" src="https://img.shields.io/badge/made%20by-douglasproglima-blue">
   </a>
 
-  <a href="https://github.com/Alquipo/moveit/commits/master">
-      <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Alquipo/moveit?color=blue">
+  <a href="https://github.com/douglasproglima/pomodoro-proglima/commits/master">
+      <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/douglasproglima/pomodoro-proglima?color=green">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?color=blue">
@@ -154,10 +154,10 @@ Para clonar e executar este aplicativo, você precisará de [Git](https://git-sc
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/Alquipo/moveit
+$ git clone https://github.com/douglasproglima/pomodoro-proglima
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd moveit
+$ cd pomodoro-proglima
 ```
 
 ### 🎲 Rodando a Aplicação
