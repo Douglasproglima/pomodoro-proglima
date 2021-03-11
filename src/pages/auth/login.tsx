@@ -2,7 +2,7 @@ import { useContext } from "react";
 
 import Input from "../../components/Inputs";
 import styles from "../../styles/pages/Login.module.css";
-import { AuthContext } from "../../context/auth-context";
+import { AuthContext } from "../../contexts/auth-context";
 
 export default function Login() {
 	const { fetchUser, handleChange } = useContext(AuthContext);
