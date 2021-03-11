@@ -1,0 +1,24 @@
+@keyframes animationImage {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading_container {
+  background-color: var(--blue-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.loading_container img {
+  animation: animationImage 2s infinite backwards;
+}
