@@ -1,6 +1,4 @@
 import '../styles/global.css';
-import { ChallengesProvider } from '../contexts/ChallengesContext';
-
 function MyApp({ Component, pageProps }) {
   return (
     /* 
@@ -15,9 +13,7 @@ function MyApp({ Component, pageProps }) {
     Resumo: O contexto é uma forma de obter acesso a informações de diversos locais da aplicação, ou
     comunicação entre componentes.
     */
-    <ChallengesProvider>
-      <Component {...pageProps} />
-    </ChallengesProvider>
+    <Component {...pageProps} />
   )
 }
 
