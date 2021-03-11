@@ -1,4 +1,5 @@
-import { createContext, useState, ReactNode } from 'react';
+import { createContext, useState, ReactNode, useEffect } from 'react';
+import Cookies from 'js-cookie';
 import challenges from '../../challenges.json';
 
 interface Challenge {
@@ -38,6 +39,18 @@ export function ChallengesProvider({ children } : ChallengesProviderProps) {
   //2 é a potência
   const experienceNextLevel = Math.pow((level + 1) * 4, 2);
 
+  //A função contida no primeiro parâmetro executa uma unica vez assim que o componente é exibido
+  //em tela. Isso ocorre toda vez que for usado o useEffect contendo o segundo parâmetro como um array vázio.
+  useEffect(() => {
+    Notification.requestPermission();
+   }, []);
+
+  useEffect(() => {
+      Cookies.set('level', String(level)); 
+      Cookies.set('currentExperience', String(currentExperience)); 
+      Cookies.set('challengesCompleted', String(challengesCompleted)); 
+    },[level, currentExperience, challengesCompleted]);
+  
   function levelUp() {
     setLevel(level + 1)
   }
@@ -47,6 +60,16 @@ export function ChallengesProvider({ children } : ChallengesProviderProps) {
     const challenge = challenges[randomChallengeIndex];
 
     setActiveChallenge(challenge);
+
+    new Audio('/notification.mp3').play();
+
+    //Se o usuário deu permissão para enviar notificações pelo browser.
+    if (Notification.permission === 'granted') {
+      new Notification('Novo desafio! 😉', {
+        body: `Valendo ${challenge.amount}xp!`,
+        vibrate: [200, 100, 200]
+      });
+    }
   }
 
   function resetChallenge() {
