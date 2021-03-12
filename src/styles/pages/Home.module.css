@@ -1,35 +1,16 @@
 .container {
-  height: 100vh;
+  height: 100vh; /*vai tentar ocupar 100% do ViewHeight*/
   max-width: 992px;
   margin: 0 auto;
   padding: 2.5rem 2rem;
-
   display: flex;
   flex-direction: column;
 }
 
 .container section {
   flex: 1;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6.25rem;
+  gap: 6.25rem; /*6.25 * 16px = 100px para descktop*/
   align-content: center;
-}
-
-@media (max-width: 1150px) {
-  .container section {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    width: 95%;
-    padding: 20px 0px;
-    align-self: center;
-  }
-}
-
-@media (max-width: 680px) {
-  .container section {
-    padding-bottom: 100px;
-  }
 }
