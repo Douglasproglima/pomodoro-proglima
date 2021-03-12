@@ -1,5 +1,4 @@
 import { GetServerSideProps } from 'next';
-import Head from 'next/head';
 
 import { CompletedChalenges } from '../components/CompletedChalenges';
 import { Countdown } from '../components/Countdown';
@@ -7,26 +6,26 @@ import { ExperienceBar } from "../components/ExperienceBar";
 import { Profile } from "../components/Profile";
 import { ChallengeBox } from '../components/ChallengeBox';
 
-import styles from '../styles/pages/Home.module.css';
 import { CountdownProvider } from "../contexts/CountdownContext";
-import { ChallengesProvider } from "../contexts/ChallengesContext";
+import { ChallengesContext, ChallengesProvider } from "../contexts/ChallengesContext";
+import Redirect from "../components/Redirect";
+import Head from 'next/head';
+import { useSession, session } from "next-auth/client";
 
-interface HomeProps {
-  level: number;
-  currentExperience: number;
-  challengesCompleted: number;
-}
+import styles from '../styles/pages/Home.module.css';
 
-export default function Home(props: HomeProps) {
+export default function Home() {
+  const [session]: any = useSession();
+
+  if (!session) {
+    return <Redirect to="/login" />;
+  }
+
   return (
-    <ChallengesProvider 
-      level={props.level} 
-      currentExperience={props.currentExperience}
-      challengesCompleted={props.challengesCompleted}
-    >
-      <div className={styles.container} >
+    <ChallengesProvider>
+      <div className={styles.container}>
         <Head>
-          <title>Início | pomodoro-proglima</title>
+          <title>Inicio | Pomodoro-proglima</title>
         </Head>
 
         <ExperienceBar />
@@ -46,16 +45,4 @@ export default function Home(props: HomeProps) {
       </div>
     </ChallengesProvider>
   );
-}
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
-
-  return {
-    props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengesCompleted: Number(challengesCompleted)
-    }
-  }
 }
