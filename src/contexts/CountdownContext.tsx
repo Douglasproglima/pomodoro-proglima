@@ -1,4 +1,3 @@
-import * as workerTimers from "worker-timers";
 import { createContext, ReactNode, useContext, useState, useEffect } from 'react';
 import { ChallengesContext } from './ChallengesContext';
 
@@ -18,7 +17,6 @@ interface CountdownProviderProps {
 export const CountdownContext = createContext({} as CountdownContextData);
 
 const INITIAL_TIME = 0.1 * 60;
-let COUNTDOWN_TIMEOUT: number;
 let COUNTDOWNTIMEOUT: NodeJS.Timeout;
 
 export function CountdownProvider({ children }: CountdownProviderProps) {
@@ -35,7 +33,6 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
     setIsActive(true);
   }
 
-
   useEffect(() => {
     if(isActive && time > 0) {
       COUNTDOWNTIMEOUT = setTimeout(() => {
@@ -51,7 +48,6 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
   }, [isActive, time]);
 
   function resetCountdown() {
-    //workerTimers.clearTimeout(COUNTDOWN_TIMEOUT);
     clearTimeout(COUNTDOWNTIMEOUT);
     setIsActive(false);
     setTime(INITIAL_TIME);
