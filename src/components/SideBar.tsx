@@ -12,7 +12,7 @@ export function SideBar() {
 
   return (
     <div className={styles.container}>
-      <img src="/logo-sidebar.svg" alt="Pomodoro-proglima" />
+      <img src="logos/logo-transparente-1.png" alt="Pomodoro-proglima" />
       <div>
         <div
           className={

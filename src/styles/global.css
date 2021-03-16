@@ -33,10 +33,11 @@ html[data-theme="dark"] {
   --background-modal: #ffffff55;
   --background-ranking: #000;
   --gray-line: #333;
-  --text: #666666;
+  --text: #b4b4b4;
   --text-highlight: #b3b9ff;
-  --title: #2e384d;
+  --title: #bfbfc0;
   --red: #e83f5b;
+  --red-dark: #b33146;
   --green: #4cd62b;
   --blue: #5965e0;
   --blue-dark: #4953b8;
