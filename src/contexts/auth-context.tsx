@@ -17,7 +17,7 @@ export const AuthContext = createContext({} as AuthContextTypes);
 export function AuthProvider({ children }: AuthType) {
   const [username, setUserName] = useState("");
   const router = useRouter();
-  
+
   async function fetchUser() {
     if (!username) return null;
 
@@ -36,10 +36,10 @@ export function AuthProvider({ children }: AuthType) {
 		}
   }
 
-  function handleChange(param) {
-		setUserName(param.target.value);
+  function handleChange(e) {
+    setUserName(e.target.value);
   }
-  
+
   return (
 		<AuthContext.Provider value={{ handleChange, fetchUser }}>
 			{children}

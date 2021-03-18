@@ -43,7 +43,7 @@ export function ChallengesProvider({ children } : ChallengesProviderProps) {
   const [totalExperience, setTotalExperience] = useState(0);
   const [currentExperience, setCurrentExperience] = useState(0); //Muda a barra de experiência do user
   const [challengesCompleted, setChallengesCompleted] = useState(0); //Desafios completados
-  const [activeChallenge, setActiveChallenge] = useState(null);
+  let [activeChallenge, setActiveChallenge] = useState(null);
   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
 
   //4 é o fator de XP do usuário
@@ -71,7 +71,7 @@ export function ChallengesProvider({ children } : ChallengesProviderProps) {
   //em tela. Isso ocorre toda vez que for usado o useEffect contendo o segundo parâmetro como um array vázio.
   useEffect(() => {
     Notification.requestPermission();
-   }, []);
+  }, []);
 
   useEffect(() => {
       Cookies.set('level', String(level));

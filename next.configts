@@ -12,6 +12,11 @@ module.exports = withPlugins([
     },
   },
   [
+  env: {
+      customKey: 'env'
+    },
+  ],
+  [
     withPWA,
     {
       pwa: {
