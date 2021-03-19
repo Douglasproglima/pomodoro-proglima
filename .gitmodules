@@ -1,0 +1,3 @@
+[submodules "src/fonts/icons/NLW4-move.it-next"]
+  path = public/icons/NLW4-move.it-next
+  url = https://github.com/Douglasproglima/pomodoro-proglima.git

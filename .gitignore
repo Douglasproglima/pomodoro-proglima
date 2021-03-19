@@ -37,3 +37,6 @@ yarn.lock
 .vercel
 .env
 .gitignore
+
+# Local Netlify folder
+.netlify
