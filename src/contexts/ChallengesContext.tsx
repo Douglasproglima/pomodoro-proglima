@@ -1,9 +1,9 @@
 import { createContext, useState, ReactNode, useEffect } from 'react';
 import Cookies from 'js-cookie';
-import challenges from '../../challenges.json';
 import { LevelUpModal } from '../components/LevelUpModal';
 import { useSession } from "next-auth/client";
 import axios from "axios";
+import challenges from '../../challenges.json';
 
 interface Challenge {
   type: 'body' | 'eye';
@@ -43,7 +43,7 @@ export function ChallengesProvider({ children } : ChallengesProviderProps) {
   const [totalExperience, setTotalExperience] = useState(0);
   const [currentExperience, setCurrentExperience] = useState(0); //Muda a barra de experiência do user
   const [challengesCompleted, setChallengesCompleted] = useState(0); //Desafios completados
-  let [activeChallenge, setActiveChallenge] = useState(null);
+  const [activeChallenge, setActiveChallenge] = useState(null);
   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
 
   //4 é o fator de XP do usuário

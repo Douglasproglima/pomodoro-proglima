@@ -1,8 +1,8 @@
 {
-  "presets": [
-    "next/babel"
-  ],
-  "plugins": [
-
-  ]
+  "presets": ["next/babel", "@babel/preset-typescript"],
+  "plugins": [],
+  "env": {
+    "test": {
+    }
+  }
 }
