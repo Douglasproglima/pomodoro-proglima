@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/api/thumbnail.png", "destination": "/api/thumbnail" }
+    { "source": "/", "destination": "https://pomodoro-proglima.vercel.app" }
   ]
 }
