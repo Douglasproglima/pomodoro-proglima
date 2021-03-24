@@ -4,9 +4,12 @@
   "private": false,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint src/ --ext ts,tsx"
+    "build:hmg": "yarn cache clean && yarn run env:hmg next build && next export",
+    "build:prod": "yarn cache clean && yarn run env:prod next build && next export",
+    "env:hmg": "cross-env ACTIVE_ENV=development",
+    "env:prod": "cross-env ACTIVE_ENV=production",
+    "start": "yarn run env:hmg next dev",
+    "start:prod": "yarn run env:prod next start"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +42,8 @@
     "@types/react-dom": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^4.15.2",
     "@typescript-eslint/parser": "^4.15.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
     "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",

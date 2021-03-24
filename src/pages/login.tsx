@@ -7,7 +7,7 @@ export default function Login() {
   const [session] = useSession();
 
   if (session) {
-    return <Redirect to="https://pomodoro-proglima.netlify.app/" />;
+    return <Redirect to="/" />;
   }
 
   return (

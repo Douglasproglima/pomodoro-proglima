@@ -6,7 +6,5 @@ export default async (request: NowRequest, response: NowResponse) => {
   const db = await connectToDatabase(process.env.MONGODB_URI);
   const user = await db.collection("users").findOne({ userId });
 
-  console.log("TESTE 001");
-
   return response.status(201).json(user);
 };

@@ -1,6 +1,6 @@
 <p align="center">
   <img  alt="Pomodoro Proglima Logo" title="Pomodoro Proglima" src=".github/readme/Pomodo Proglima-2.png" />
-</p> 
+</p>
 
 <h1 align="center">
 🚧 Pomodoro Proglima | Em Construção 🚧
@@ -16,13 +16,11 @@
       <img alt="Made by Proglima" src="https://img.shields.io/badge/made%20by-douglasproglima-blue">
   </a>
 
-  <a href="https://github.com/douglasproglima/pomodoro-proglima/commits/master">
-      <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/douglasproglima/pomodoro-proglima?color=green">
-  </a>
-
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?color=blue">
 
 <img alt="CI Workflow" src="https://github.com/Alquipo/moveit/workflows/ci/badge.svg?color=blue">
+
+<img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/7e69e2fb-f278-4311-ae9f-99776b8df156/deploy-status">
 </p>
 
 <p align="center">
@@ -34,7 +32,12 @@
   <a target="_blank" href="https://nextjs.org/">
       <img alt="NextJS" src="https://img.shields.io/static/v1?color=white&label=Next&message=JS&?style=plastic&logo=Next.js">
   </a>
+
+  <a target="_blank" href="https://www.netlify.com/">
+      <img alt="Netlify" src="https://img.shields.io/badge/Netlify-Netlify-green">
+  </a>
 </p>
+
 
 <h1 align="center">
   Bem Vindo ao App Pomodoro Proglima
@@ -221,6 +224,6 @@ BASE_URL=
 
 ## 📝 Licença
 
-Este projeto esta sobe a licença MIT. Veja a [LICENÇA](https://opensource.org/licenses/MIT) para saber mais.
+Este projeto esta sobe a licença MIT. Veja a [LICENÇA](https://opensource.org/licenses/MIT) par saber mais.
 
 Feito com ❤️ por Douglas Lima <img src="https://raw.githubusercontent.com/Douglasproglima/douglasproglima/master/gifs/Hi.gif" width="30px"></h2> [Entre em contato!](https://www.linkedin.com/in/douglasproglima)
