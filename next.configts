@@ -8,7 +8,7 @@ module.exports = withPlugins([
     future: { webpack5: true },
     typescript: {
       // !! WARN !!
-      ignoreBuildErrors: true,
+      ignoreBuildErrors: false,
     },
   },
   [
