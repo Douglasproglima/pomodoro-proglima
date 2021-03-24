@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "https://pomodoro-proglima.vercel.app" }
+    { "source": "http://localhost:3000/", "destination": "https://pomodoro-proglima.vercel.app" }
   ]
 }
