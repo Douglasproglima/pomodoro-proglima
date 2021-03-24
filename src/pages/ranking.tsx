@@ -25,9 +25,8 @@ export default function Ranking() {
 
   const [session]: any = useSession();
 
-  if (!session) {
+  if (!session)
     return <Redirect to="/login" />;
-  }
 
   return (
     <>

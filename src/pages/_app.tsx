@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
     /*<Component {...pageProps} />*/
     <Provider session={pageProps.session}>
       {router.pathname !== "/login" ? <SideBar /> : ""}
-
+      {console.log(pageProps.session+" - "+router.pathname)}
       <Component {...pageProps} />
     </Provider>
   );

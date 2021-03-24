@@ -3,12 +3,14 @@ import { signIn, useSession } from "next-auth/client";
 import Redirect from "../components/Redirect";
 import Head from "next/head";
 import styles from "../styles/pages/Login.module.css";
+
+const URL = process.env.NODE_ENV === "development" ? "http://localhost:3000/" : "https://pomodoro-proglima.vercel.app/";
+
 export default function Login() {
   const [session] = useSession();
 
-  if (session) {
-    return <Redirect to="/" />;
-  }
+  if (session)
+    return <Redirect to={URL} />;
 
   return (
     <>
