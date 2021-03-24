@@ -4,8 +4,8 @@
   "private": false,
   "scripts": {
     "dev": "next dev",
-    "build:hmg": "yarn cache clean && yarn run env:hmg next build && next export",
-    "build:prod": "yarn cache clean && yarn run env:prod next build && next export",
+    "build:hmg": "yarn cache clean && yarn run env:hmg next build",
+    "build:prod": "yarn cache clean && yarn run env:prod next build",
     "env:hmg": "cross-env ACTIVE_ENV=development",
     "env:prod": "cross-env ACTIVE_ENV=production",
     "start": "yarn run env:hmg next dev",
